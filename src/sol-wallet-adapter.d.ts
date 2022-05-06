@@ -1,4 +1,6 @@
 declare module "@project-serum/sol-wallet-adapter" {
-  const magic: any;
+  type = any;
+
+  const magic: any,;
   export = magic;
 }
