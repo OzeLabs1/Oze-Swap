@@ -4,9 +4,13 @@ import { Routes } from "./routes";
 function App() {
   return (
     <div className="App">
-      
- </div>
-
+      <div className="footer">
+       
+      </div>
+      <Routes />
+     
+    </div>
+  );
 }
 
 export default App;
