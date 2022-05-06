@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
-import Wallet from "@project-serum/sol-wallet-adapter";
+import Wallet from "sol-wallet-adapter";
 import { notify } from "./notifications";
 import { useConnectionConfig } from "./connection";
 import { useLocalStorageState } from "./utils";
@@ -8,6 +8,7 @@ export const WALLET_PROVIDERS = [
   { name: "sollet.io", url: "https://www.sollet.io" },
   { name: "solflare.com", url: "https://solflare.com/access-wallet" },
   { name: "mathwallet.org", url: "https://www.mathwallet.org" },
+  { name: "phantom.app", url: "https://phantom.app" },
 ];
 
 const WalletContext = React.createContext<any>(null);
@@ -17,6 +18,7 @@ export function WalletProvider({ children = null as any }) {
   const [providerUrl, setProviderUrl] = useLocalStorageState(
     "walletProvider",
     "https://www.sollet.io"
+    "phantom"
   );
   const wallet = useMemo(() => new Wallet(providerUrl, endpoint), [
     providerUrl,

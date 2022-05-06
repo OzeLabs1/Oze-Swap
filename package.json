@@ -9,6 +9,8 @@
     "@solana/spl-token": "0.0.11",
     "@solana/spl-token-swap": "0.0.2",
     "@solana/wallet-adapter-base": "^0.9.5",
+    "@solana/wallet-adapter-phantom": "^0.9.3",
+    "@solana/wallet-adapter-react": "^0.15.4",
     "@solana/wallet-adapter-react-ui": "^0.9.6",
     "@solana/wallet-adapter-wallets": "^0.16.0",
     "@solana/web3.js": "^0.78.2",
