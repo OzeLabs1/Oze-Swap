@@ -18,7 +18,6 @@ export function WalletProvider({ children = null as any }) {
   const [providerUrl, setProviderUrl] = useLocalStorageState(
     "walletProvider",
     "https://www.sollet.io"
-    "phantom.app"
   );
   const wallet = useMemo(() => new Wallet(providerUrl, endpoint), [
     providerUrl,
