@@ -127,7 +127,7 @@ export const AddToLiquidity = () => {
       </Popover>
 
       <CurrencyInput
-        title="Input"
+        title="Add"
         onInputChange={(val: any) => {
           if (A.amount !== val) {
             setLastTypedAccount(A.mintAddress);
@@ -142,7 +142,7 @@ export const AddToLiquidity = () => {
       />
       <div>+</div>
       <CurrencyInput
-        title="Input"
+        title="Add"
         onInputChange={(val: any) => {
           if (B.amount !== val) {
             setLastTypedAccount(B.mintAddress);

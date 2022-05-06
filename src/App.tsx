@@ -4,8 +4,8 @@ import { Routes } from "./routes";
 function App() {
   return (
     <div className="App">
-      <div className="Banner">
-        <div className="Banner-description">
+      <div className="footer">
+        <div className="footer-description">
           POWERED BY MOONSTARDOM
         </div>
       </div>
