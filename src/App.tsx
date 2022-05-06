@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="Banner">
         <div className="Banner-description">
-          POWERED BY TDC.
+          POWERED BY MOONSTARDOM
         </div>
       </div>
       <Routes />
