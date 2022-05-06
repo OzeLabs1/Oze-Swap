@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
-import Wallet from "sol-wallet-adapter";
+import Wallet from "@project-serum/sol-wallet-adapter";
 import { notify } from "./notifications";
 import { useConnectionConfig } from "./connection";
 import { useLocalStorageState } from "./utils";
@@ -18,7 +18,7 @@ export function WalletProvider({ children = null as any }) {
   const [providerUrl, setProviderUrl] = useLocalStorageState(
     "walletProvider",
     "https://www.sollet.io"
-    "phantom"
+    "phantom.app"
   );
   const wallet = useMemo(() => new Wallet(providerUrl, endpoint), [
     providerUrl,
