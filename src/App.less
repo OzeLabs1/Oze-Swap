@@ -2,8 +2,35 @@
 @import "./ant-custom.less";
 
 body {
-  --row-highlight: @background-color-base;
+  background: linear-gradient(to bottom, #ff99cc 0%, #33ccff 100%);
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 700; 
+  color:#070707;
 }
+
+.trade-button{
+  border-radius: 12px;
+  color: #1b1a1a;
+  }
+
+.ant-input{ color: rgb(2, 2, 2);
+}
+  .ant-card {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum', "tnum";
+    position: relative;
+    background: rgb(193, 234, 245);
+    border-radius: 2px;
+    }
 
 .App-logo {
   background-image: url("");
@@ -61,7 +88,7 @@ body {
   flex-direction: row;
   -webkit-box-align: center;
   align-items: center;
-  justify-self: flex-end;
+  justify-self: flex-end; 
 }
 
 .ant-tabs-nav-scroll {
@@ -100,7 +127,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(5, 1, 1) !important; 
 }
 
 .App-link {
@@ -136,7 +163,7 @@ body {
 
 .exchange-card {
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+  box-shadow: rgba(226, 222, 222, 0.1) 0px 0px 10px 0px;
   width: 450px;
   margin: 4px auto;
   padding: 0px;
