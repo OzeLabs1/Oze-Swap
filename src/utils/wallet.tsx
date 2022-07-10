@@ -67,7 +67,7 @@ export const WALLET_PROVIDERS = [
 
 const WalletContext = React.createContext<null | WalletContextValues>(null);
 
-export function WalletProvider({ children }) {
+export function WalletProvider({ children = null as any }) {
   const { endpoint } = useConnectionConfig();
 
   const [autoConnect, setAutoConnect] = useState(false);
