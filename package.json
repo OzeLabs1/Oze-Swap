@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^5.9.0",
+    "@ledgerhq/hw-transport-webusb": "^6.27.1",
     "@project-serum/serum": "^0.13.7",
     "@project-serum/sol-wallet-adapter": "^0.1.1",
     "@solana/spl-token": "0.0.11",
