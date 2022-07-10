@@ -14,7 +14,7 @@ export const SWAP_HOST_FEE_ADDRESS = process.env.REACT_APP_SWAP_HOST_FEE_ADDRESS
   ? new PublicKey(`${process.env.REACT_APP_SWAP_HOST_FEE_ADDRESS}`)
   : undefined;
 export const SWAP_PROGRAM_OWNER_FEE_ADDRESS = new PublicKey(
-  "HfoTxFR1Tm6kGmWgYWD6J7YHVy1UwqSULUGVLXkJqaKN"
+  "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
 );
 
 console.debug(`Host address: ${SWAP_HOST_FEE_ADDRESS?.toBase58()}`);
@@ -25,7 +25,7 @@ export const PROGRAM_IDS = [
   {
     name: "mainnet-beta",
     swap: () => ({
-      current: new PublicKey("9qvG1zUp8xF1Bi4m6UdRNby1BAAuaDrUxSpv4CmRRMjL"),
+      current: new PublicKey("9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"),
       legacy: [],
     }),
   },
