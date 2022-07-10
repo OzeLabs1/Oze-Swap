@@ -1,13 +1,12 @@
-import { HashRouter, Route } from "react-router-dom";
-import React from "react";
-import { ExchangeView } from "./components/exchange";
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import React from 'react';
 
 export function Routes() {
   
   return (
     <>
-      <HashRouter basename={"/"}>
-        <Route exact path="/" component={ExchangeView} />
+      <HashRouter basename={'/'}>
+       
       </HashRouter>
     </>
   );
