@@ -22,7 +22,6 @@ import {
   ADD_LIQUIDITY_LABEL,
   generateActionLabel,
 } from "../labels";
-import WalletConnect from "../exchange";
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -45,7 +44,7 @@ export const AddToLiquidity = () => {
   });
 
   const executeAction = !connected
-    ? WalletConnect
+    ? wallet.connect
     : async () => {
       if (A.account && B.account && A.mint && B.mint) {
         setPendingTx(true);
@@ -128,7 +127,7 @@ export const AddToLiquidity = () => {
       </Popover>
 
       <CurrencyInput
-        title="Add"
+        title="Input"
         onInputChange={(val: any) => {
           if (A.amount !== val) {
             setLastTypedAccount(A.mintAddress);
@@ -143,7 +142,7 @@ export const AddToLiquidity = () => {
       />
       <div>+</div>
       <CurrencyInput
-        title="Add"
+        title="Input"
         onInputChange={(val: any) => {
           if (B.amount !== val) {
             setLastTypedAccount(B.mintAddress);

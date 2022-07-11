@@ -14,7 +14,6 @@ import { useCurrencyPairState } from "../../utils/currencyPair";
 import { generateActionLabel, POOL_NOT_AVAILABLE, SWAP_LABEL } from "../labels";
 import "./trade.less";
 import { getTokenName } from "../../utils/utils";
-import WalletConnect from "../exchange";
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -76,7 +75,7 @@ export const TradeEntry = () => {
     <>
       <div>
         <CurrencyInput
-          title="You Pay"
+          title="Input"
           onInputChange={(val: any) => {
             if (A.amount !== val) {
               setLastTypedAccount(A.mintAddress);
@@ -94,7 +93,7 @@ export const TradeEntry = () => {
           ⇅
         </Button>
         <CurrencyInput
-          title="You Recieve"
+          title="To (Estimate)"
           onInputChange={(val: any) => {
             if (B.amount !== val) {
               setLastTypedAccount(B.mintAddress);
@@ -113,7 +112,7 @@ export const TradeEntry = () => {
         className="trade-button"
         type="primary"
         size="large"
-        onClick={connected ? handleSwap : WalletConnect}
+        onClick={connected ? handleSwap : wallet.connect}
         style={{ width: "100%" }}
         disabled={
           connected &&

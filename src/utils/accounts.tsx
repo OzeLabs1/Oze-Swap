@@ -170,7 +170,7 @@ const UseNativeAccount = () => {
         setNativeAccount(acc);
       }
     });
-  }, [setNativeAccount, wallet, wallet.publicKey, connection]);
+  }, [setNativeAccount, wallet, wallet?.publicKey, connection]);
 
   return { nativeAccount };
 };
@@ -222,15 +222,15 @@ export function AccountsProvider({ children = null as any }) {
 
   const selectUserAccounts = useCallback(() => {
     return [...accountsCache.values()].filter(
-      (a) => a.info.owner.toBase58() === wallet.publicKey.toBase58()
+      (a) => a.info.owner.toBase58() === wallet?.publicKey?.toBase58()
     );
   }, [wallet]);
 
   useEffect(() => {
     setUserAccounts(
       [
-        wrapNativeAccount(wallet.publicKey, nativeAccount),
-        ...tokenAccounts,
+        wrapNativeAccount (wallet?.publicKey? nativeAccount)
+        ,tokenAccounts,
       ].filter((a) => a !== undefined) as TokenAccount[]
     );
   }, [nativeAccount, wallet, tokenAccounts]);
