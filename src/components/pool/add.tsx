@@ -22,6 +22,7 @@ import {
   ADD_LIQUIDITY_LABEL,
   generateActionLabel,
 } from "../labels";
+import WalletConnect from "../exchange";
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -44,7 +45,7 @@ export const AddToLiquidity = () => {
   });
 
   const executeAction = !connected
-    ? wallet.connect
+    ? WalletConnect
     : async () => {
       if (A.account && B.account && A.mint && B.mint) {
         setPendingTx(true);

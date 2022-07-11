@@ -14,6 +14,7 @@ import { useCurrencyPairState } from "../../utils/currencyPair";
 import { generateActionLabel, POOL_NOT_AVAILABLE, SWAP_LABEL } from "../labels";
 import "./trade.less";
 import { getTokenName } from "../../utils/utils";
+import WalletConnect from "../exchange";
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -112,7 +113,7 @@ export const TradeEntry = () => {
         className="trade-button"
         type="primary"
         size="large"
-        onClick={connected ? handleSwap : wallet.connect}
+        onClick={connected ? handleSwap : WalletConnect}
         style={{ width: "100%" }}
         disabled={
           connected &&
